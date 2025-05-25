@@ -1,0 +1,204 @@
+:root {
+    /* --main-green: #88c999; */
+    --main-green:#88b053;
+    --main-pink: #ffc0cb;
+
+    /* --light-green: #e8fcee; */
+    --light-green: #edf6d9;
+    --light-pink: #fff0f5;
+
+    --whole-page: mistyrose;
+    --brown-border: #6d4c41;
+
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    height: 100vh;
+    font-style: normal;
+    color: var(--main-green);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin:0;
+    background-color: var(--whole-page);
+}
+
+.screen {
+    height: 620px;
+    width: 540px;
+    border: medium solid var(--brown-border);
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+    /* background-color: inherit; */
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    /* background-color: whitesmoke; */
+    background-image: url("../images/green1.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card {
+    /* overflow: auto; */
+    border-left: medium solid var(--brown-border);
+    border-right: medium solid var(--brown-border);
+    border-bottom: medium solid var(--brown-border);
+    background-color: whitesmoke;
+    height: 82%;
+    background-color: rgba(254, 246, 248, 0.7);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+.fake-browser {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--main-pink);
+    padding: 0.4rem;
+    border-bottom: medium solid var(--brown-border);
+}
+
+.arrows img{
+    padding-top: 2px;
+    height: 50%;
+    width: auto;
+
+}
+
+.url-bar{
+    border: medium solid var(--brown-border);
+    border-radius: 25px;
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 0.1rem 4rem;
+    height: 20%;
+    width: auto;
+    margin:0;
+}
+
+button.green{
+    border: 2px solid var(--brown-border);
+    border-radius: 50%;
+    height: 1rem;
+    background-color:palegreen;
+}
+
+button.red{
+    border: 2px solid var(--brown-border);
+    border-radius: 50%;
+    height: 1rem;
+    background-color: palevioletred;
+}
+
+button.yellow{
+    border: 2px solid var(--brown-border);
+    border-radius: 50%;
+    height: 1rem;
+    background-color:yellow;
+}
+
+.divider-space{
+    margin: 0;
+    padding: 0.3rem;
+}
+
+.top-nav{
+    background-color: var(--main-pink);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-top: medium solid var(--brown-border);
+    border-bottom: medium solid var(--brown-border);
+}
+
+div.divider{
+    width:50px;
+    height:auto;
+    display:inline-block;
+}
+
+button.nav {
+    border-radius: 25px;
+    /* width: 100px;
+    height: 30px; */
+    width: 20%;
+    height: 65%;
+    display: flex;
+    background-color: var(--light-pink);
+    color:inherit;
+    font:inherit;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    border: medium solid var(--main-green);
+    margin: 0;
+    padding: 0;
+}
+
+button.nav:hover{
+    background-color: var(--light-green);
+}
+
+.footer{
+    text-decoration: none;
+    text-align: center;
+    padding: 0.5rem 0;
+    margin:0;
+    background-color: var(--main-pink);
+    border-bottom: medium solid var(--brown-border);
+    border-left: medium solid var(--brown-border);
+    border-right: medium solid var(--brown-border);
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    font-size: 0.85rem;
+}
+
+.blinkies-container{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.blinky{
+    width: 100px;
+    height: auto;
+}
+
+.fire-heart{
+    width: auto;
+    height:1.5em;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.footer a {
+    height: 20%;
+    text-decoration: none;
+    text-align: center;
+    color: inherit;
+    margin: 0;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    display: inline-flex;
+}
+
+.banner {
+    background-color:var(--main-pink);
+    border-top: medium solid var(--brown-border);
+    margin:0;
+    padding: 0;
+    line-height: 1;
+    font-size: 0.85rem;
+    display: inline-block;
+}

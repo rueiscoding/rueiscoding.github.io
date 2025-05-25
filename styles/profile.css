@@ -1,0 +1,114 @@
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: start;
+    /* gap: 1.5rem; */
+    gap: 5px 20px;
+    margin: 1rem;
+}
+
+.main-grid-three{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: start;
+    /* gap: 1.5rem; */
+    gap: 5px 20px;
+    margin: 1rem;
+}
+
+.pic-of-me img {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+    border: medium solid var(--main-green);
+}
+
+.about-me h2{
+    margin: 0;
+    margin-left: 20px;
+}
+
+.winking{
+    width: 20%;
+    height:auto;
+    vertical-align: middle;
+}
+
+.about-me p{
+    display: inline-box;
+    border-radius: 25px;
+    border: medium solid var(--main-pink);
+    padding: 20px;
+    margin: 0;
+    background-color: var(--light-pink);
+}
+
+.welcome-box{
+    border-radius: 25px;
+    display: inline-box;
+    /* border: medium solid var(--main-pink); */
+    border: medium solid #9cccef;
+    overflow: auto;
+    margin:0;
+}
+
+.welcome-box p{
+    padding: 1rem;
+}
+
+.heart{
+    width: 20%;
+    height:auto;
+    vertical-align: middle;
+}
+
+a.button {
+    height: 1rem;
+    width: 6rem;
+    text-align: center;
+    padding-bottom: 5px;
+    border-radius: 25px;
+    border: medium solid var(--main-green);
+    color: var(--main-green);
+    background-color: var(--light-pink);
+    text-decoration: none;
+}
+
+a.button:hover{
+    background-color: var(--main-pink);
+}
+
+.links{
+    border-radius: 25px;
+    border: medium solid var(--main-pink);
+    padding-bottom: 1rem;
+    background-color: var(--light-green);
+    margin: 0;
+}
+
+h2.my-links{
+    padding: 20px;
+    margin: 0;
+    /* font-size: 1.5rem;
+    font-weight: 700; */
+}
+
+.link-buttons-old {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    padding: 1rem;
+    margin: auto;
+}
+
+.link-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.widget {
+    border-radius: 25px;
+    border: medium solid var(--main-pink);
+}
