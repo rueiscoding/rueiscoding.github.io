@@ -114,7 +114,7 @@
 
 }
 
-.another-box{
+.now-playing{
     flex:1;
     border: medium solid var(--main-green);
     background-color: var(--light-pink);
