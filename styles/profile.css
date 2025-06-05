@@ -9,7 +9,7 @@
 
 .main-grid-three{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     align-items: start;
     /* gap: 1.5rem; */
     gap: 5px 20px;
@@ -20,8 +20,8 @@
     width: 100%;
     height: auto;
     border-radius: 25px;
-    /* border: medium solid var(--main-green); */
-    border: medium solid #9cccef;
+    border: medium solid var(--main-pink);
+    /* border: medium solid #9cccef; */
 }
 
 .about-me h2{
@@ -60,22 +60,6 @@
     
 }
 
-.welcome-box{
-    border-radius: 25px;
-    display: inline-box;
-    /* border: medium solid var(--main-pink); */
-    /* border: medium solid #9cccef; */
-    background-color: #fff3f6;
-    border: medium solid var(--main-green);
-    overflow: auto;
-    margin:0;
-    height: 175px;
-}
-
-.welcome-box p{
-    padding: 1rem;
-}
-
 .heart{
     width: 20px;
     height:20px;
@@ -96,6 +80,7 @@ a.button {
 
 a.button:hover{
     background-color: var(--main-pink);
+    cursor: pointer;
 }
 
 .links{
@@ -134,43 +119,90 @@ h2.my-links{
 
 .widget {
     border-radius: 25px;
-    /* border: medium solid var(--main-pink); */
-    border: medium solid #9cccef;
-    height: 175px;
-    background-image: url("../images/garden-path.gif");
+    border: medium solid var(--main-pink);
+    /* border: medium solid #9cccef; */
+    height: 160px;
+    background-image: url("../images/garden-bg.gif");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    margin:0;
+    /* margin:0; */
     padding:0;
+    margin-top: 10px;
+    position: relative;
 }
 
 .walking-grounds{
-    margin-top:90px;
+    margin-top:75px;
     margin-left:5px;
     margin-right:5px;
     margin-bottom:0;
     height: 80px;
-    width:90%;
+    width:95%;
     /* border: medium solid black; */
-    position: relative;
+    position: absolute;
+    cursor: pointer;
 }
 
-.walking-msg{
-    
+
+.msg {
+    position: absolute;
+    width: 40%;
+    height: 65%;
+    left: 160px;
+    margin-top:30px;
+    margin-bottom: 5px;
+    border: medium dotted var(--main-pink);
+    font-family: "Pixelify Sans", sans-serif;
+    border-radius: 20px;
+    background-color: rgba(254, 251, 246, 0.8);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    text-align: center;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+/* 
+
+    background: linear-gradient(90deg, var(--main-pink) 50%, #fefbf6 80%), linear-gradient(90deg, var(--main-pink) 50%, #fefbf6 80%), linear-gradient(0deg, var(--main-pink) 50%, #fefbf6 80%), linear-gradient(0deg, var(--main-pink) 50%, #fefbf6 80%);
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    background-size: 15px 4px, 15px 4px, 4px 15px, 4px 15px;
+    background-position: 0px 0px, 100px 50px, 0px 50px, 100px 0px;
+    animation: border-dance 4s infinite linear; */
+}
+
+.msg.hidden{
+    transition: opacity 0.8s;
+    opacity:0;
+    pointer-events: none;
+}
+
+@keyframes border-dance {
+  0% {
+    background-position: 0px 0px, 200px 116px, 0px 150px, 216px 0px;
+  }
+  100% {
+    background-position: 200px 0px, 0px 116px, 0px 0px, 216px 150px;
+  }
+}
+
+.msg p{
+    margin-top: 5px;
+    padding:0px;
+    margin-bottom: 0px;
 }
 
 #step-counter {
-    border: thin solid var(--light-pink);
-    border-radius: 25px;
-    width: 70px;
+    border: medium solid var(--main-green);
+    border: medium solid #9cccef;
+    border-radius: 10px;
+    width: 75px;
+    height: 20px;
     text-align: center;
     position: absolute;
     bottom:5px;
     right: 5px;
     /* display: none; */
-    background-color: var(--main-pink);
-    font-size: 0.9rem;
+    background-color: var(--light-pink);
+    /* font-size: 1rem; */
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.4s ease;
@@ -178,9 +210,11 @@ h2.my-links{
 }
 
 #rue {
-    position: relative;
+    position: absolute;
     width: 60px;
     height: auto;
     transition: transform 0.2s ease;
     pointer-events: none;
+    left: 50px;
+    /* top: 50px; */
 }

@@ -1,16 +1,62 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => { //waits until page done loading
     const widget = document.querySelector(".walking-grounds");
     const pet = document.getElementById("rue");
+    const stepCounter = document.getElementById("step-counter");
+    
+    const getRueLeft = () => `images/rue-left.gif?${Date.now()}`; //sets to first frame
+    const getRueRight = () => `images/rue-right.gif?${Date.now()}`;
+
   
     let targetX = 0;
     let targetY = 0;
     let currentX = 0;
     let currentY = 0;
+    
+    let isMouseInside = false;
+
+    let lastX = 0;
+    let lastY = 0;
+    let steps = 0;
+    let distance = 0;
+
+    let direction = "standing";
   
     function animate() {
-      const speed = 0.05;
+      const speed = 0.03;
+
+        if(isMouseInside){
+            change = targetX - currentX;
+            if(Math.abs(change) < 5){
+
+                if(direction !="standing"){
+                    direction = "standing";
+                    pet.src = 'images/rue-standing.png';
+                }
+            }
+            else if(change > 0 && direction!=="r"){
+                pet.src = getRueRight();
+                direction = "r";
+            }
+            else if (change < 0 && direction!=="l"){
+                pet.src = getRueLeft();
+                direction = "l";
+            }
+        }
+
       currentX += (targetX - currentX) * speed;
       currentY += (targetY - currentY) * speed;
+
+      const dx = currentX - lastX;
+      const dy = currentY - lastY;
+      distance += Math.floor(Math.sqrt(dx*dx + dy*dy));
+      if(distance >8){
+        steps++;
+        stepCounter.textContent = `steps: ${steps}`;
+        distance=0;
+      }
+
+      lastX=currentX;
+      lastY=currentY;
   
       pet.style.transform = `translate(${currentX}px, ${currentY}px)`;
       requestAnimationFrame(animate);
@@ -18,91 +64,32 @@ document.addEventListener("DOMContentLoaded", () => {
   
     widget.addEventListener("mousemove", (e) => {
       const rect = widget.getBoundingClientRect();
-      targetX = e.clientX - rect.left -20;
-      targetY = e.clientY - rect.top -60;
+      targetX = e.clientX - rect.left -20 - 50;
+      targetY = e.clientY - rect.top - 60;
+      isMouseInside = true;
     });
   
     widget.addEventListener("mouseleave", () => {
-      targetX = 0;
-      targetY = 0;
+      targetX = currentX;
+      targetY = currentY;
+      pet.src = 'images/rue-standing.png';
+        direction = "standing";
+      isMouseInside=false;
     });
+
+    document.querySelector(".widget").addEventListener("mousemove", (e) =>{
+        document.querySelector(".msg").classList.add("hidden");
+        document.getElementById("step-counter").style.opacity="1";
+    });
+
   
-    animate(); //start animation
-
-
-    const petGif = 'images/rue.gif';
-    const petPng = 'images/rue-standing.png';
-
-    let idleTimeout;
-
-    widget.addEventListener('mousemove', (e) => {
-    pet.src = petGif;
-
-    //reset idle timer
-    clearTimeout(idleTimeout);
-    idleTimeout = setTimeout(() => {
-        pet.src = petPng;   //switch to png after1.5 sec
-    }, 1500);
-    });
+    animate();
 
     widget.addEventListener('mouseleave', () => {
-    clearTimeout(idleTimeout);
-    pet.src = petPng; //switch to png when exit
+        pet.src = 'images/rue-standing.png';
+        direction ="standing";
     });
 
-
-    const stepCounter = document.getElementById("step-counter");
-    let movementTimeout = null;
-
-    function showStepCounter() {
-        stepCounter.style.display = "block";
-
-        if (movementTimeout) clearTimeout(movementTimeout);
-        movementTimeout = setTimeout(() => {
-            stepCounter.style.display = "none";
-        }, 2000); //resent timer after 2
-    }
-
-    //when moue moveing
-    document.querySelector(".walking-grounds").addEventListener("mousemove", () => {
-        showStepCounter();
-    });
-
-
-
-    let steps = 0;
-    let isMoving = false;
-    let moveEndTimeout = null;
-
-    function updateStepDisplay() {
-        stepCounter.textContent = `steps: ${steps}`;
-    }
-
-    function showStepCounter() {
-        stepCounter.style.opacity = 1;
-    }
-
-    function hideStepCounter() {
-        stepCounter.style.opacity = 0;
-    }
-
-    function handleMouseMove() {
-        
-        if (!isMoving) { //if new movemnt
-            isMoving = true;
-            steps += Math.floor(Math.random() * 3) +1;
-            updateStepDisplay();
-            showStepCounter();
-        }
-
-        clearTimeout(moveEndTimeout);
-        moveEndTimeout = setTimeout(() => {
-            isMoving = false;
-            hideStepCounter();
-        }, 700); //wait b4 ending session
-    }
-
-    document.querySelector(".walking-grounds").addEventListener("mousemove", handleMouseMove);
 
   });
   

@@ -147,6 +147,7 @@ button.nav {
 
 button.nav:hover{
     background-color: var(--light-green);
+    cursor: pointer;
 }
 
 .footer{
@@ -183,7 +184,7 @@ button.nav:hover{
     vertical-align: middle;
 }
 
-.footer a {
+.footer p {
     height: 20%;
     text-decoration: none;
     text-align: center;
