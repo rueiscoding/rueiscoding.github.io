@@ -51,7 +51,8 @@ body {
     border-right: medium solid var(--brown-border);
     border-bottom: medium solid var(--brown-border);
     background-color: whitesmoke;
-    height: 82%;
+    /* height: 82%; */
+    height: 500px;
     /* background-color: rgba(254, 246, 248, 0.8);
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px); */

@@ -1,218 +1,126 @@
-:root {
-    /* --main-green: #88c999; */
-    --main-green:#88b053;
-    --main-pink: #ffc0cb;
-
-    /* --light-green: #e8fcee; */
-    --light-green: #edf6d9;
-    --light-pink: #fff0f5;
-
-    --whole-page: mistyrose;
-    --brown-border: #6d4c41;
-
+.scroll-area{
+    width: inherit;
+    height: 395px;
+    /* border: medium solid greenyellow; */
+    overflow: scroll;
+    
 }
 
 
-.body2 {
-    font-family: "Nunito", sans-serif;
-    font-weight: 500;
-    font-size: 15px;
-    height: 100vh;
-    font-style: normal;
-    color: var(--main-green);
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    margin:0;
-    background-color: var(--whole-page);
-}
 
-.screen2 {
-    height: 620px;
-    width: 540px;
-    border: medium solid var(--brown-border);
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
-    /* background-color: inherit; */
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-bottom: 1rem;
-    /* background-color: whitesmoke; */
-    background-image: url("../images/green1.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.card2 {
-    /* overflow: auto; */
-    border-left: medium solid var(--brown-border);
-    border-right: medium solid var(--brown-border);
-    border-bottom: medium solid var(--brown-border);
-    background-color: whitesmoke;
-    height: 82%;
-    /* background-color: rgba(254, 246, 248, 0.75);
-    backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(2px); */
-}
-
-.fake-browser2 {
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--main-pink);
-    padding: 0.4rem;
-    border-bottom: medium solid var(--brown-border);
-}
-
-.arrows2 img{
-    padding-top: 2px;
-    height: 50%;
-    width: auto;
-
-}
-
-.url-bar2{
-    border: medium solid var(--brown-border);
-    border-radius: 25px;
-    background-color: whitesmoke;
+.counter p{
+    /* border: medium solid greenyellow; */
+    justify-content: middle; 
+    width: 400px;
+    margin: auto;
+    margin-top:15px;
+    padding:0;
     text-align: center;
-    padding: 0.1rem 4rem;
-    height: 20%;
-    width: auto;
-    margin:0;
+    font-size: 12px;
 }
 
-button.green2{
-    border: 2px solid var(--brown-border);
-    border-radius: 50%;
-    height: 1rem;
-    background-color:palegreen;
+.explanation p{
+    /* border: medium solid greenyellow; */
+    width: 400px;
+    margin: auto;
+    margin-top:15px;
+    padding:0;
+    text-align: center;
 }
 
-button.red2{
-    border: 2px solid var(--brown-border);
-    border-radius: 50%;
-    height: 1rem;
-    background-color: palevioletred;
-}
-
-button.yellow2{
-    border: 2px solid var(--brown-border);
-    border-radius: 50%;
-    height: 1rem;
-    background-color:yellow;
-}
-
-.divider-space2{
-    margin: 0;
-    padding: 0.3rem;
-}
-
-.top-nav2{
+.form-box{
+    margin: auto;
+    margin-top:15px;
+    height: 175px;
+    width: 400px;
+    /* border: thin dotted var(--main-green); */
     background-color: var(--main-pink);
-    display:flex;
-    justify-content: space-around;
+    border-radius: 15px;
     align-items: center;
-    /* justify-content: center; */
-    height: 40px;
-    /* padding-left: 25px;
-    padding-right: 25px; */
-    /* border-top: medium solid var(--brown-border); */
-    /* border-bottom: medium solid var(--brown-border); */
 }
 
-.tab-button {
-    flex: 1;
-    background-color: whitesmoke;
-    /* border: medium solid var(--main-green); */
-    border: medium solid var(--brown-border);
-    border-bottom: none;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    height: 30px;
-    margin-top: 10px;
-}
-
-div.divider2{
-    width:50px;
-    height:auto;
-    display:inline-block;
-}
-
-button.nav2 {
-    border-radius: 25px;
-    /* width: 100px;
-    height: 30px; */
-    width: 20%;
-    height: 65%;
+.in-a-row{
     display: flex;
+    justify-content: center;
+    gap:8px;
+}
+
+.input {
+    border: medium dotted var(--main-pink);
+    border-radius: 10px;
+    font-family: "Nunito", sans-serif;
+    /* flex-grow:1; */
+    /* gap: 10px; */
+    width:95px;
+    height: 1.5rem;
+    color: var(--main-green);
+    /* margin-left: 20px; */
+    margin-top: 15px;
+    padding-left: 10px;
+}
+
+.msg-box{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    border: medium dotted var(--main-pink);
+    border-radius: 15px;
+    font-family: "Nunito", sans-serif;
+    margin:0;
+    margin-top: 15px;
+    margin-left: 15px;
+    width: 340px;
+    height:3rem;
+    color: var(--main-green);
+    resize: none;
+
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    margin:0;
+    margin-top: 12px;
+    padding:0;
+
+}
+
+.submit-msg{
+    border-radius: 10px;
+    width: 100px;
+    height: 1.5rem;
     background-color: var(--light-pink);
     color:inherit;
     font:inherit;
-    text-align: center;
-    justify-content: center;
-    text-align: center;
-    border: medium solid var(--main-green);
-    margin: 0;
+    border: thin solid var(--main-green);
+    justify-content: middle; 
+    margin: auto;
     padding: 0;
+    margin:0;
+    cursor: pointer;
+    /* font-family: "Meow Script", cursive;
+    font-size: 20px;
+    font-style: bold; */
 }
 
-button.nav2:hover{
+.submit-msg:hover{
     background-color: var(--light-green);
+
 }
 
-.footer2{
-    text-decoration: none;
-    text-align: center;
-    padding: 0.5rem 0;
-    margin:0;
-    background-color: var(--main-pink);
-    border-bottom: medium solid var(--brown-border);
-    border-left: medium solid var(--brown-border);
-    border-right: medium solid var(--brown-border);
-    display: flex;
-    justify-content: center;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-    font-size: 0.85rem;
+.comments{
+    margin: auto;
+    margin-top:15px;
+    border: thin solid black;
+    height: 300px;
+    width: 400px;
+    background-color: white;
+    border: thin dotted var(--main-pink);
 }
 
-.blinkies-container2{
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-}
-
-.blinky2{
-    width: 100px;
-    height: auto;
-}
-
-.fire-heart2{
-    width: auto;
-    height:1.5em;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.footer2 a {
-    height: 20%;
-    text-decoration: none;
-    text-align: center;
-    color: inherit;
-    margin: 0;
-    gap: 0.4rem;
-    font-size: 0.85rem;
-    display: inline-flex;
-}
-
-.banner2 {
-    background-color:var(--main-pink);
-    border-top: medium solid var(--brown-border);
-    margin:0;
-    padding: 0;
-    line-height: 1;
-    font-size: 0.85rem;
-    display: inline-block;
+input::placeholder,
+textarea::placeholder {
+  color: var(--main-green);
+  font-family: "Nunito", sans-serif;
+  /* font-size: 0.8rem; */
 }

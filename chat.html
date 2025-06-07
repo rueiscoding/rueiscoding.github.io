@@ -5,10 +5,11 @@
         <meta content="width=device-width"/>
         <title>rue's world</title>
         <link rel="stylesheet" href="styles/style.css">
-        <!-- <link rel="stylesheet" href="styles/chat.css"> -->
+        <link rel="stylesheet" href="styles/chat.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Meow+Script&display=swap" rel="stylesheet">
 
     </head>
     <body>
@@ -39,6 +40,30 @@
                     <div class="divider"></div>
                     <button class= "nav">chat</button>
                 </nav>
+
+                <div class="scroll-area">
+                    <div class="counter">
+                        <p>you are visitor number <b>1</b>. there are <b>0</b> comments.</p>
+                    </div>
+
+                    <div class="explanation">
+                        <p>thanks for visiting! leave a little note while you are here.</p>
+                    </div>
+
+                    <div class="form-box">
+                        <div class="in-a-row">
+                            <input style="margin-left:6px" class="input" type="text" id="name" placeholder="name" name="fname"><br><br>
+                            <input class="input" type="text" id="website" placeholder="email (optional)" name="fname"><br><br>
+                            <input class="input" type="text" id="email" placeholder="website (optional)" name="fname"><br><br>
+                        </div>
+                        <textarea class="msg-box" name="fname" id="comment" placeholder="enter your comment here!"></textarea>
+                        <div class="wrapper">
+                            <input class="submit-msg" type="button" value="post"><br><br>
+                        </div>
+                    </div>
+
+                    <div class="comments"></div>
+                </div>
 
             </div>
 
